@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#OOTM_오늘의 사운드 스타일링</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@400;700&display=swap">
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#nav-menu">
+    
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-md bg-white navbar-white fixed-top">
+      <div class="container">
+
+        <a class="gugi-font navbar-brand" href="index.html"># OOTM</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+            aria-controls="nav-menu" aria-expanded="false" aria-label="메뉴">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav ms-auto my-2">
+              <li class="nav-item"><a class="nav-link" href="spring.html">Spring</a></li>
+              <li class="nav-item"><a class="nav-link" href="summer.html">Summer</a></li>
+              <li class="nav-item"><a class="nav-link" href="autumn.html">Autumn</a></li>
+              <li class="nav-item"><a class="nav-link" href="winter.html">Winter</a></li>
+            </ul>
+      </div>
+    </nav>
+
+    <!-- 프로필 디자인 -->
+    <section class="container text-center">
+        <div class="row p-5">
+            <div class="col-3">
+                <img src="images/playerspring.png" alt="Spring" class="rounded-circle w-100 me-5">
+            </div>
+            <div class="col-9 py-3">
+                <div class="d-flex flex-column justify-content-between h-100 ">
+                <div class="row align-items-baseline">
+                    <div class="col-4 mx-1 fs-1"> @ Spring</div>
+                    <div class="col mx-1">
+                        <button class="btn btn-outline-secondary"> 좋아요 </button>
+                    </div>
+                    <div class="col-4 mx-1">
+                        <button type="button" class="btn btn-outline-secondary px-5" data-bs-toggle="modal" data-bs-target="#submitModal">
+                            My Pick 공유하기
+                        </button>
+                        <!-- 음악 제출 모달 -->
+                        <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title fs-4" id="submitModalLabel">My Pick 공유하기</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/musiccloud.png" class="w-75"><br>
+                                <p class="fs-4"> 나만의 계절별 플리를 공유해주세요</p>
+                                <p class="fs-6 ">* 보내주신 의견은 검토를 거친 후 플레이리스트에 추가됩니다</p>
+                                <div class="input-group">
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary-subtle" data-bs-dismiss="modal">취소</button>
+                                <a href="result.html">
+                                    <button type="button" class="btn btn-outline-secondary">보내기</button>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-1 mx-1">
+                        <button class="btn btn-outline-secondary">...</button>
+                    </div>
+                </div>
+                <div class="row fs-5">
+                    <div class="col mx-2"> | 좋아요 36 </div>
+                    <div class="col mx-2"> | 곡 5 </div>
+                    <div class="col mx-2"> | 재생 시간 0h 18m </div>
+                    <div class="col-1 mx-2"></div>
+                </div>
+                    <p class="align-self-start ms-4 ps-5">봄 플레이리스트</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- 곡 갤러리 섹션 시작 -->
+    <section class="p-5 mx-5">
+        <div class="container overflow-hidden">
+
+            <!--첫번째 줄-->
+            <div class="row g-2 align-items-center px-5">
+                <!--곡 하나-->
+                <div class="col-4 mb-2">
+                    <div class="rounded p-3 post" data-bs-toggle="modal" data-bs-target="#songModal1">
+                        <img class="rounded" src="images/springsong1.png" width="100%">
+                        <hr class="my-3">
+                            <p class="m-0 fs-4 d-block text-truncate">나만, 봄</p>
+                            <p class="m-0 fs-6 d-block text-truncate">볼빨간사춘기</p>
+                        <!--모달-->
+                        <div class="modal fade" id="songModal1" tabindex="-1" aria-labelledby="songModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title fs-1 ps-3" id="songModalTitle">나만, 봄</p>
+                                        <p class="pt-3 ps-3 text-black-50">볼빨간사춘기</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body position-relative">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img src="images/springsong1.png" width="90%" class="float-start ms-3 py-3">
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex flex-column justify-content-between h-100 me-4">
+                                                    <p class="text-center mt-5 fs-6">"<br>flower sunshine<br>완벽한 하루를<br>사실 너와 걸을 수 있다면<br>얼마나 좋을까<br> "</p>
+                                                    <img src="images/barspring.png" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--곡 하나-->
+                <div class="col-4 mb-2">
+                    <div class="rounded p-3 post" data-bs-toggle="modal" data-bs-target="#songModal2">
+                        <img class="rounded" src="images/springsong2.png" width="100%">
+                        <hr class="my-3">
+                            <p class="m-0 fs-4 d-block text-truncate ">너에게 닿기를</p>
+                            <p class="m-0 fs-6 d-block text-truncate" >10CM</p>
+                        <!--모달-->
+                        <div class="modal fade" id="songModal2" tabindex="-1" aria-labelledby="songModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title fs-1 ps-3" id="songModalTitle">너에게 닿기를</p>
+                                        <p class="pt-3 ps-3 text-black-50">10CM</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body position-relative">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img src="images/springsong2.png" width="90%" class="float-start ms-3 py-3">
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex flex-column justify-content-between h-100 me-4">
+                                                    <p class="text-center mt-5 fs-6">"<br>천진난만한 이런 기분도<br>신이 나서 날아갈 정도로 웃었던 날도<br>사랑스럽고 소중하게 키울 수 있도록<br> "</p>
+                                                    <img src="images/barspring.png" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--곡 하나-->
+                <div class="col-4 mb-2">
+                    <div class="rounded p-3 post" data-bs-toggle="modal" data-bs-target="#songModal3">
+                        <img class="rounded" src="images/springsong3.png" width="100%">
+                        <hr class="my-3">
+                            <p class="m-0 fs-4 d-block text-truncate ">Madeleine Love</p>
+                            <p class="m-0 fs-6 d-block text-truncate" >CHEEZE</p>
+                        <!--모달-->
+                        <div class="modal fade" id="songModal3" tabindex="-1" aria-labelledby="songModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title fs-1 ps-3" id="songModalTitle">Madeleine Love</p>
+                                        <p class="pt-3 ps-3 text-black-50">CHEEZE</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body position-relative">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img src="images/springsong3.png" width="90%" class="float-start ms-3 py-3">
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex flex-column justify-content-between h-100 me-4">
+                                                    <p class="text-center mt-5 fs-6">"<br>날씨가 좋다고 뻔한<br>말이라도 건네볼까<br>어색한 장난이라도 용감하게<br>오늘은 널 웃음 짓게 만들 거야<br>"</p>
+                                                    <img src="images/barspring.png" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--두번째 줄-->
+            <div class="row g-2 align-items-center px-5">
+                <!--곡 하나-->
+                <div class="col-4 mb-2">
+                    <div class="rounded p-3 post" data-bs-toggle="modal" data-bs-target="#songModal4">
+                        <img class="rounded" src="images/springsong4.png" width="100%">
+                        <hr class="my-3">
+                            <p class="m-0 fs-4 d-block text-truncate">벚꽃 엔딩</p>
+                            <p class="m-0 fs-6 d-block text-truncate">버스커 버스커</p>
+                        <!--모달-->
+                        <div class="modal fade" id="songModal4" tabindex="-1" aria-labelledby="songModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title fs-1 ps-3" id="songModalTitle">벚꽃 엔딩</p>
+                                        <p class="pt-3 ps-3 text-black-50">버스커 버스커</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body position-relative">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img src="images/springsong4.png" width="90%" class="float-start ms-3 py-3">
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex flex-column justify-content-between h-100 me-4">
+                                                    <p class="text-center mt-5 fs-6">"<br>봄바람 휘날리며<br>흩날리는 벚꽃 잎이<br>울려 퍼질 이 거리를<br>우우 둘이 걸어요<br>"</p>
+                                                    <img src="images/barspring.png" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--곡 하나-->
+                <div class="col-4 mb-2">
+                    <div class="rounded p-3 post" data-bs-toggle="modal" data-bs-target="#songModal5">
+                        <img class="rounded" src="images/springsong5.png" width="100%">
+                        <hr class="my-3">
+                            <p class="m-0 fs-4 d-block text-truncate ">봄봄봄</p>
+                            <p class="m-0 fs-6 d-block text-truncate" >로이킴</p>
+                        <!--모달-->
+                        <div class="modal fade" id="songModal5" tabindex="-1" aria-labelledby="songModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title fs-1 ps-3" id="songModalTitle">봄봄봄</p>
+                                        <p class="pt-3 ps-3 text-black-50">로이킴</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body position-relative">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img src="images/springsong5.png" width="90%" class="float-start ms-3 py-3">
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex flex-column justify-content-between h-100 me-4">
+                                                    <p class="text-center mt-5 fs-6">
+                                                        "<br>그대여 나를 처음 본 순간<br>나는 바로 알았지<br>그대여 나와 함께 해주오<br>이 봄이 가기 전에<br>"
+                                                    </p>
+                                                    <img src="images/barspring.png" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- 음악 어플 연결 -->
+    <section class="container text-center my-5">
+        <h4 class="py-3">MORE</h4><br>
+        <div class="d-flex justify-content-evenly align-items-center">
+            <a href="https://www.melon.com/search/dj/index.htm?q=%EB%B4%84&section=&searchGnbYn=Y&kkoSpl=Y&kkoDpType=&mwkLogType=T" 
+                target="_blank" class="btn btn-outline-success rounded-pill btn-lg px-4"><i class="bi bi-record-circle-fill"></i></a>
+            <a href="https://music.apple.com/kr/search?term=%EB%B4%84" 
+                target="_blank" class="btn btn-outline-danger rounded-pill btn-lg px-4"><i class="bi bi-apple-music"></i></a>
+            <a href="https://open.spotify.com/search/%EB%B4%84/playlists" 
+                target="_blank" class="btn btn-outline-success rounded-pill btn-lg px-4"><i class="bi bi-spotify"></i></a>
+            <a href="https://www.youtube.com/results?search_query=%EB%B4%84+%ED%94%8C%EB%A0%88%EC%9D%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8" 
+                target="_blank" class="btn btn-outline-danger rounded-pill btn-lg px-4"><i class="bi bi-youtube"></i></a>
+        </div>
+    </section>
+
+    <!-- TOP 버튼 -->
+    <section class="py-5">
+      <div class="container overflow-hidden">
+        <div class="text-center text-white py-5">
+          <a href="#top"> <button type="button" class="btn btn-outline-secondary">Top↑</button></a>
+        </div>
+      </div>
+    </section>
+    <br>
+
+    <!-- 풋터 -->
+    <footer class="bg-dark text-white">
+        <div class="container text-center">
+            <p class="py-4 mb-0">Copyright <i class="bi bi-c-circle"></i> 2025 Designed by Shin Seungeun</p>
+        </div>
+    </footer>
+
+    <!-- cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>
